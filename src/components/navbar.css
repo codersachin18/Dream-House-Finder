@@ -1,0 +1,105 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+ background-color: black;
+
+  color: white;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: x-large;
+  gap: 22px;
+  text-transform: uppercase;
+
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 32px;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  left: 0px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  font-size: xx-large;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+
+}
+
+@media (max-width: 768px) {
+  .nav-links a {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+}
+
+.login-button:hover {
+  background-color: #45a049;
+ 
+}
+
+.login-button:active {
+  background-color: #45a049;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+
+.login-button{
+  padding: 7px;
+  border-radius: 33px;
+  background-color: aqua;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-left: 18px;
+}

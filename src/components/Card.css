@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-right: 22px;
+  background: linear-gradient(135deg, #dceefb, #a9d6f5, #74b3e8);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card h1 {
+  font-size: 45px;
+  width: 600px;
+  text-transform: uppercase;
+  font-weight: bold;
+  overflow: hidden;
+  font-weight: bold;
+  padding: 12px;
+}
+
+@media(max-width:500px){
+    .card h1 {
+      
+        padding-left: 252px;
+        font-size: xx-large;
+        width: 400px;
+    }
+
+    .card h2{
+        display: none;
+    }
+
+   img{
+      width: 522px;
+      height: 422px;
+    }
+
+   
+}
+
+.card h2 {
+  width:600px;
+  
+}
+
+
+
+.ad1 {
+  width: 50%;
+  overflow: hidden;
+}
