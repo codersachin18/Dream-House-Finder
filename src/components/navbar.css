@@ -84,22 +84,8 @@
   }
 }
 
-.login-button:hover {
-  background-color: #45a049;
- 
-}
 
-.login-button:active {
-  background-color: #45a049;
-  box-shadow: 0 2px #666;
-  transform: translateY(4px);
-}
 
 .login-button{
-  padding: 7px;
-  border-radius: 33px;
-  background-color: aqua;
-  padding-left: 12px;
-  padding-right: 12px;
-  margin-left: 18px;
+  display: none;
 }
