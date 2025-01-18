@@ -82,10 +82,22 @@
   .menu-button {
     display: block;
   }
+
 }
 
 
 
 .login-button{
+<<<<<<< HEAD
   display: none;
 }
+=======
+  padding: 7px;
+  display:none;
+  border-radius: 33px;
+  background-color: aqua;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-left: 18px;
+}
+>>>>>>> bea9b71fd3263810e3a89dd8d569e252c0e4b06e
