@@ -82,6 +82,9 @@
   .menu-button {
     display: block;
   }
+  .login-button{
+    display:none;
+  }
 }
 
 .login-button:hover {
