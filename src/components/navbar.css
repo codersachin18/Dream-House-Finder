@@ -82,9 +82,7 @@
   .menu-button {
     display: block;
   }
-  .login-button{
-    display:none;
-  }
+
 }
 
 .login-button:hover {
@@ -100,6 +98,7 @@
 
 .login-button{
   padding: 7px;
+  display:none;
   border-radius: 33px;
   background-color: aqua;
   padding-left: 12px;
