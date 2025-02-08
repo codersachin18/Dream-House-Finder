@@ -1,103 +1,95 @@
-.navbar-container {
+
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: linear-gradient(180deg, #0a1f29, #0b5091, #081725);
   padding: 10px 20px;
- background-color: black;
-
-  color: white;
+  
 }
 
-.logo a {
-  color: white;
-  text-decoration: none;
+
+.navbar-logo a {
+  color: #fff;
   font-size: 24px;
+  text-decoration: none;
   font-weight: bold;
 }
 
-.nav-links {
+
+.navbar-links {
   display: flex;
-  align-items: center;
+  gap: 50px;
 }
 
-.nav-links a {
-  color: white;
+.navbar-links a {
+  color: #fff;
   text-decoration: none;
-  margin: 0 10px;
-  font-size: x-large;
-  gap: 22px;
-  text-transform: uppercase;
-
+  font-size: 28px;
+  transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  text-decoration: underline;
+.navbar-links a:hover {
+  color: #ffdd57;
 }
 
-.menu-button {
+
+.navbar-toggle {
   display: none;
-  background: none;
-  border: none;
+  flex-direction: column;
   cursor: pointer;
 }
 
-.sidebar {
-  display: none;
-  flex-direction: column;
+.navbar-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+}
+
+
+.navbar-close-btn {
+  display: none; 
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
   position: absolute;
-  top: 32px;
-  justify-content: center;
-  align-items: center;
-  background-color: #333;
-  left: 0px;
-  border-radius: 5px;
-  width: 100%;
+  top: 20px;
+  right: 20px;
 }
 
-.sidebar a {
-  color: white;
-  text-decoration: none;
-  margin: 10px 0;
-  font-size: xx-large;
-}
-
-.sidebar a:hover {
-  text-decoration: underline;
-}
-
-.show {
-  display: flex;
-}
-
-.hide {
-  display: none;
-
-}
 
 @media (max-width: 768px) {
-  .nav-links a {
-    display: none;
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    right: -50%;
+    height: 100vh;
+    width: 50%;
+    background-color: #413f3fe7;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
   }
 
-  .menu-button {
-    display: block;
+  .navbar-links.active {
+    right: 0;
   }
 
-}
+  .navbar-links a {
+    font-size: 24px; 
+    padding: 15px 0; 
+  }
 
+  .navbar-toggle {
+    display: flex;
+  }
 
-
-.login-button{
-<<<<<<< HEAD
-  display: none;
+  .navbar-close-btn {
+    display: block; 
+  }
 }
-=======
-  padding: 7px;
-  display:none;
-  border-radius: 33px;
-  background-color: aqua;
-  padding-left: 12px;
-  padding-right: 12px;
-  margin-left: 18px;
-}
->>>>>>> bea9b71fd3263810e3a89dd8d569e252c0e4b06e

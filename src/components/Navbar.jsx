@@ -1,43 +1,38 @@
 import React, { useState } from 'react';
-import './navbar.css';
+import './Navbar.css';
+import { Link } from 'react-router-dom';
 
-export const Navbar = () => {
-  const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleSidebar = () => {
-    setIsSidebarVisible(!isSidebarVisible);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
   };
 
   return (
-    <div className="navbar-container">
-      <div className="logo">
-        <a href="#">Dream Home Finder</a>
+    <nav className="navbar">
+      <div className="navbar-logo">
+        <Link to="/">DREAM HOME FINDER</Link>
       </div>
-      <div className="nav-links">
-        <a className='navs' href="#home">Home</a>
-        <a className='navs' href="#about">About</a>
-        <a className='navs' href="#services">Services</a>
-        <a className='navs' href="#contact">Contact</a>
-        <button className="menu-button" onClick={toggleSidebar}>
-          <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="white">
-            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
-          </svg>
+      <div className={`navbar-links ${isOpen ? 'active' : ''}`}>
+        <button className="navbar-close-btn" onClick={closeMenu}>
+          &times;
         </button>
-        <button className="login-button">Login</button>
+        <Link to="/" onClick={closeMenu}>Home</Link>
+        <Link to="/about" onClick={closeMenu}>About</Link>
+        <Link to="/services" onClick={closeMenu}>Services</Link>
+        <Link to="/contact" onClick={closeMenu}>Contact</Link>
       </div>
-
-      <div className={`sidebar ${isSidebarVisible ? 'show' : 'hide'}`}>
-        <a href="#" onClick={toggleSidebar}>
-          <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="white">
-            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
-          </svg>
-        </a>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+      <div className="navbar-toggle" onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-    </div>
+    </nav>
   );
 };
 
